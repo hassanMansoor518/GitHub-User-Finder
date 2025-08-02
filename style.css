@@ -1,0 +1,176 @@
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #0d1117;
+  color: #ccc;
+  margin: 0;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container {
+margin-top: 100px;
+  width: 100%;
+  max-width: 700px;
+  
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+ 
+}
+
+.input {
+  flex: 1;
+  padding: 15px 20px;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  color: white;
+  border-radius: 6px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #666;
+}
+
+.input:focus {
+  border-color: #2f81f7;
+  box-shadow: 0 0 0 2px rgba(47, 129, 247, 0.3);
+}
+
+.button {
+  background-color: #2f81f7;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #1e70d4;
+}
+
+.profile-card {
+  transition: all 0.3s ease;
+}
+
+.card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.card-header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 9999px;
+  border: 1px solid #30363d;
+}
+
+.card-header .name {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.card-header .username {
+  color: #888;
+  font-size: 14px;
+}
+
+.card-bio {
+  margin-top: 16px;
+  color: #ccc;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.card-grid span {
+  color: white;
+  font-weight: 500;
+}
+
+.card-link {
+  margin-top: 24px;
+}
+
+.card-link a {
+  color: #2f81f7;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card-link a:hover {
+  text-decoration: underline;
+}
+
+.skeleton {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 24px;
+  animation: pulse 1.5s infinite;
+}
+
+.skeleton-box {
+  background-color: #333;
+  border-radius: 4px;
+  height: 16px;
+  margin-bottom: 10px;
+}
+
+.skeleton-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+@media (min-width: 300px) and (max-width: 600px) {
+ .container {margin-top: 20px;}
+ .heading {font-size: 7vw;}
+ .search-bar {
+  flex-wrap: wrap;
+
+}
+}
