@@ -1,3 +1,6 @@
-let num = null
 
-typeof(num)
+
+console.log(name)
+const name = "Hassan";
+
+
