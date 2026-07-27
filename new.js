@@ -31,7 +31,7 @@
 // console.log(isEqual({name:"hassan"}, {name:"hassans"})); 
 
 
- //day 1 
+//day 1 
 
 // Q1. What is a closure? Write an example where a closure is used to create a private counter variable.
 
@@ -48,3 +48,49 @@
 
 // console.log(counter())
 // console.log(counter())
+
+
+//Q3. What is the difference between how 'this' behaves in an arrow function versus a normal function?
+//Give a code example.
+
+
+// const person = {
+//   name : "Hassan",
+
+//   greet: function(){
+//     console.log(this.name);
+
+//   }
+// }
+
+// person.greet()
+
+
+// const person = {
+//   name : "Hassan",
+
+//   greet() {
+//     setTimeout(()=> {
+//     console.log(this.name);
+//   },1000)
+// },
+// }
+
+// person.greet()
+
+
+
+
+const student = {
+  name: "Hassan",
+  
+  greet() {
+    const callback = () => {
+      console.log(this.name);
+    };
+
+    callback(); // Direct call
+  }
+};
+
+student.greet();
