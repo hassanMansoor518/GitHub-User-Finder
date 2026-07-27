@@ -31,20 +31,20 @@
 // console.log(isEqual({name:"hassan"}, {name:"hassans"})); 
 
 
-
+ //day 1 
 
 // Q1. What is a closure? Write an example where a closure is used to create a private counter variable.
 
-function counterState(){
-  let counter = 0 
+// function counterState(){
+//   let counter = 0 
 
-  return function counterVariable(){ 
-    counter++
-    return counter
-  }
-}
+//   return function counterVariable(){ 
+//     counter++
+//     return counter
+//   }
+// }
 
-const counter = counterState();
+// const counter = counterState();
 
-console.log(counter())
-console.log(counter())
+// console.log(counter())
+// console.log(counter())
