@@ -1,6 +1,6 @@
-// day 0 Scenario 
-// function isEqual(a, b) {
+// //day 0 Scenario 
 
+// function isEqual(a, b) {
 
 //   if(Number.isNaN(a) && Number.isNaN(b)){
 //     return true 
@@ -28,6 +28,7 @@
 
 // console.log(isEqual(0, 0)); 
 // console.log(isEqual(1, 2)); 
+// console.log(isEqual("a","a"));
 // console.log(isEqual({name:"hassan"}, {name:"hassans"})); 
 
 
@@ -52,7 +53,6 @@
 
 //Q3. What is the difference between how 'this' behaves in an arrow function versus a normal function?
 //Give a code example.
-
 
 // const person = {
 //   name : "Hassan",
@@ -79,18 +79,67 @@
 // person.greet()
 
 
+// const student = {
+//   name: "Hassan",
+
+//   greet() {
+//     const callback = () => {
+//       console.log(this.name);
+//     };
+
+//     callback(); // Direct call
+//   }
+// };
+
+// student.greet();
 
 
-const student = {
-  name: "Hassan",
-  
-  greet() {
-    const callback = () => {
-      console.log(this.name);
-    };
+// Write a function `createCounter()` using closures that returns increment, decrement, and getValue functions.
 
-    callback(); // Direct call
-  }
-};
+// function createCounter() {
+//     let counter = 0;
 
-student.greet();
+//     function increment() {
+//         counter++
+//         return counter
+//     }
+//     function decrement() {
+//         counter--
+//         return counter
+//     }
+//     function getValue() {
+//         return counter;
+//     }
+
+//     return{
+//         increment,
+//         decrement,
+//         getValue
+//     }
+
+// }
+
+// let counter = createCounter();
+
+// console.log(counter.increment());
+// console.log(counter.increment());
+// console.log(counter.decrement());
+// console.log(counter.increment());
+// console.log(counter.getValue());
+
+
+
+// You have a for-loop using 'var' that creates 5 buttons, each meant to alert its own index number on click,
+// but all buttons alert 5. Explain why this happens and fix it using let and using closures (IIFE)
+
+
+// for (var i = 0; i < 5; i++) {
+//     const btn = document.createElement("button")
+//     btn.innerText = i
+
+//     btn.onclick = function () { 
+//         alert(i) 
+//     }
+//     document.body.appendChild(btn)
+// }
+
