@@ -143,3 +143,62 @@
 //     document.body.appendChild(btn)
 // }
 
+
+// const input = document.getElementById("input")
+
+// function debounce(fn, delay) {
+//     let timer
+
+//     return function (...args) {
+//         clearTimeout(timer)
+//         timer = setTimeout(() => {
+//             fn(args)
+//         }, delay)
+//     }
+// }
+
+// input.addEventListener("input", debounce(function (elem) {
+//     console.log(elem[0].target.value);
+
+// }, 500))
+
+
+
+
+
+
+const input = document.getElementById("input");
+
+
+
+function debounce(fn,delay){
+    let timer;
+
+    return function(...args){
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            fn(args);
+            
+        }, delay);
+    }
+}
+
+
+
+
+input.addEventListener("input", debounce(function(e){console.log(e[0].target.value);
+},500))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
