@@ -1,9 +1,9 @@
-// //day 0 Scenario 
+// //day 0 Scenario
 
 // function isEqual(a, b) {
 
 //   if(Number.isNaN(a) && Number.isNaN(b)){
-//     return true 
+//     return true
 //   }
 
 //   if (a === 0 && b === 0) {
@@ -26,20 +26,20 @@
 
 // }
 
-// console.log(isEqual(0, 0)); 
-// console.log(isEqual(1, 2)); 
+// console.log(isEqual(0, 0));
+// console.log(isEqual(1, 2));
 // console.log(isEqual("a","a"));
-// console.log(isEqual({name:"hassan"}, {name:"hassans"})); 
+// console.log(isEqual({name:"hassan"}, {name:"hassans"}));
 
 
-//day 1 
+//day 1
 
 // Q1. What is a closure? Write an example where a closure is used to create a private counter variable.
 
 // function counterState(){
-//   let counter = 0 
+//   let counter = 0
 
-//   return function counterVariable(){ 
+//   return function counterVariable(){
 //     counter++
 //     return counter
 //   }
@@ -137,60 +137,29 @@
 //     const btn = document.createElement("button")
 //     btn.innerText = i
 
-//     btn.onclick = function () { 
-//         alert(i) 
+//     btn.onclick = function () {
+//         alert(i)
 //     }
 //     document.body.appendChild(btn)
 // }
 
 
-// const input = document.getElementById("input")
 
-// function debounce(fn, delay) {
-//     let timer
+// const input = document.getElementById("input");
 
-//     return function (...args) {
-//         clearTimeout(timer)
-//         timer = setTimeout(() => {
+// function debounce(fn,delay){
+//     let timer;
+//     return function(...args){
+//         clearTimeout(timer);
+//         timer = setTimeout(()=>{
 //             fn(args)
-//         }, delay)
+//         },delay)
 //     }
 // }
 
-// input.addEventListener("input", debounce(function (elem) {
-//     console.log(elem[0].target.value);
-
-// }, 500))
 
 
-
-
-
-
-const input = document.getElementById("input");
-
-
-
-function debounce(fn,delay){
-    let timer;
-
-    return function(...args){
-        clearTimeout(timer);
-        timer = setTimeout(() => {
-            fn(args);
-            
-        }, delay);
-    }
-}
-
-
-
-
-input.addEventListener("input", debounce(function(e){console.log(e[0].target.value);
-},500))
-
-
-
+// input.addEventListener("input", debounce(function(e){console.log(e[0].target.value)},1000))
 
 
 
