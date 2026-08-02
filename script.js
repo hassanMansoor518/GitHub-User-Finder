@@ -83,8 +83,9 @@ searchBtn.addEventListener('click', () => {
       } else if (error.message.startsWith("GitHub API error")) {
         errorMessage = `Error from GitHub: ${error.message}`;
       }
-      
+
       // Sanitize errorMessage before injecting into innerHTML
       profileDiv.innerHTML = `<p>Error: ${escapeHTML(errorMessage)}</p>`;
     });
+
 });
